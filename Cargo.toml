@@ -1,0 +1,20 @@
+[package]
+name = "test-parsers"
+version = "0.0.1"
+authors = ["Luni-4 <luni-4@hotmail.it>"]
+edition = "2018"
+
+[dependencies]
+tree-sitter-core = { git = "https://github.com/lu-zero/tree-sitter-core" }
+tree-sitter-languages = { version = "0.0.1", features = ["rust"] }
+
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+panic = "unwind"
+incremental = false
+overflow-checks = false
